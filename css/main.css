@@ -1,7 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 html {
-    color: #222;
-    font-size: 1em;
     line-height: 1.4;
+}
+
+body {
+    background-color: #e5e5e5;
+    color: #222222;
+    font-size: 16px;
 }
 
 ::-moz-selection {
@@ -54,19 +67,113 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Intro
+==================*/
 
+.intro {
+    padding: 50px 15px;
+    background-attachment: fixed;
+    background-color: #0F2658;
+    color: #e2e2e2;
+}
+.intro h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
 
+/* Filters
+===================*/
 
+.filter-wrapper {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 50px;
+    background-color: #b3d4fc;
+    color: #222222;
+}
 
+.filter-holder {
+    display: inline-block;
+}
 
+.filter-hidden {
+    position: absolute;
+    left: -9999px;
+}
 
+.filter-style {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 3px solid #0F2658;
+    transition: all .25s;
+}
 
+.filter-style.active {
+    background-color: darkorange;
+    transition: all .25s;
+}
 
+/* Grid
+===================*/
 
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: flex-start;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+}
 
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 250px;
+    padding: 15px;
+    margin: 10px;
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
 
+.tags-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
+.item-tag-holder {
+    background-color: #222222;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 3px;
+}
 
+.item-tag {
+    display: inline-block;
+    padding: 0px 15px;
+}
+
+.item-tag-holder.red {
+    background-color: darkred;
+}
+
+.item-tag-holder.green {
+    background: darkgreen;
+}
+
+.item-tag-holder.blue {
+    background-color: darkblue;
+}
 
 /* ==========================================================================
    Media Queries
